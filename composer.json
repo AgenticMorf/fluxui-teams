@@ -1,0 +1,27 @@
+{
+    "name": "agenticmorf/fluxui-teams",
+    "description": "FluX UI for Jurager Teams - Livewire components and Blade views",
+    "type": "library",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "jurager/teams": "^3.0",
+        "laravel/framework": "^11.0|^12.0",
+        "livewire/flux": "^2.0",
+        "livewire/livewire": "^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AgenticMorf\\FluxUITeams\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AgenticMorf\\FluxUITeams\\FluxUITeamsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
