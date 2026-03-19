@@ -1,9 +1,23 @@
 {
     "name": "agenticmorf/fluxui-teams",
+    "homepage": "https://github.com/AgenticMorf/fluxui-teams",
+    "support": {
+        "source": "https://github.com/AgenticMorf/fluxui-teams"
+    },
     "description": "FluX UI for Jurager Teams - Livewire components and Blade views",
     "type": "library",
     "version": "1.0.0",
     "license": "MIT",
+    "require-dev": {
+        "christhompsontldr/laravel-docit": "^1.0",
+        "laravel/pint": "^1.24",
+        "orchestra/pest-plugin-testbench": "^4.0",
+        "orchestra/testbench": "^10.0",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^12.0"
+    },
     "require": {
         "php": "^8.2",
         "jurager/teams": "^3.0",
@@ -16,11 +30,30 @@
             "AgenticMorf\\FluxUITeams\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "AgenticMorf\\FluxUITeams\\Tests\\": "tests/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
                 "AgenticMorf\\FluxUITeams\\FluxUITeamsServiceProvider"
             ]
+        }
+    },
+    "scripts": {
+        "docit": "php vendor/bin/build-docs",
+        "lint": "pint",
+        "analyse": "phpstan analyse",
+        "test": "bash -c 'cd ../.. && vendor/bin/pest plugins/fluxui-teams/tests --configuration=plugins/fluxui-teams/phpunit.xml'",
+        "test:coverage": "bash -c 'cd ../.. && XDEBUG_MODE=coverage vendor/bin/pest plugins/fluxui-teams/tests --configuration=plugins/fluxui-teams/phpunit.xml --coverage'",
+        "test:type-coverage": "bash -c 'cd ../.. && vendor/bin/pest plugins/fluxui-teams/tests --configuration=plugins/fluxui-teams/phpunit.xml --type-coverage'",
+        "test:mutation": "bash -c 'cd ../.. && XDEBUG_MODE=coverage vendor/bin/pest plugins/fluxui-teams/tests --configuration=plugins/fluxui-teams/phpunit.xml --mutate --everything --covered-only --class=AgenticMorf\\\\FluxUITeams'"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
         }
     },
     "minimum-stability": "stable"

@@ -1,4 +1,6 @@
-# christhompsontldr/fluxui-teams
+# agenticmorf/fluxui-teams
+
+Documentation is available on [GitHub Pages](https://agenticmorf.github.io/fluxui-teams/).
 
 FluX UI for [Jurager Teams](https://github.com/jurager/teams) — Livewire components and Blade views for team management.
 
@@ -13,7 +15,7 @@ FluX UI for [Jurager Teams](https://github.com/jurager/teams) — Livewire compo
 ## Installation
 
 ```bash
-composer require christhompsontldr/fluxui-teams
+composer require agenticmorf/fluxui-teams
 ```
 
 ## Configuration
